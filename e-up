@@ -1,0 +1,26 @@
+
+[1mFrom:[0m /home/rspeckpfs-92216/code/ruby-labs/advanced-hashes-hashketball-web-091817/hashketball.rb @ line 143 Object#num_points_scored:
+
+    [1;34m138[0m: [32mdef[0m [1;34mnum_points_scored[0m(name)
+    [1;34m139[0m:   game_hash.collect {|location, team_data| [1;34m#do I need to use multiple 'collect's as I navigate down a nested hash? If not, does it mater which level I use 'collect on?'[0m
+    [1;34m140[0m:     team_data.each {|attribute, data|
+    [1;34m141[0m:       [32mif[0m attribute == [33m:players[0m
+    [1;34m142[0m:         data.each {|player_name, stat_list|
+ => [1;34m143[0m:           binding.pry
+    [1;34m144[0m:           [32mif[0m player_name == name
+    [1;34m145[0m:             player_name.each {|stats, values|
+    [1;34m146[0m:               binding.pry
+    [1;34m147[0m:             }
+    [1;34m148[0m:           [32mend[0m
+    [1;34m149[0m:         }
+    [1;34m150[0m:         game_hash[location][attribute][data[name]].each {|stats, value| [1;34m#I learned that 'stat' is a special word. lol.[0m
+    [1;34m151[0m:           binding.pry
+    [1;34m152[0m:           [32mif[0m stats == [33m:points[0m
+    [1;34m153[0m:             value
+    [1;34m154[0m:           [32mend[0m
+    [1;34m155[0m:         }
+    [1;34m156[0m:       [32mend[0m
+    [1;34m157[0m:     }
+    [1;34m158[0m:   }
+    [1;34m159[0m: [32mend[0m
+
